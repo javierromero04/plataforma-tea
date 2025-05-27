@@ -1,0 +1,175 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    background-color: #a98fff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ul li {
+    color: #0b0c0c;
+    margin: 0 15px;
+    justify-content: center;
+}
+
+ul li a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ul li a .enlace {
+    color: #0b0c0c;
+}
+
+ul li:last-child {
+    margin-left: 3;
+}
+
+.h1vm {
+    font-size: smaller;
+}
+
+.h2vm {
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    color: #0b0c0c;
+}
+
+p { 
+    color: #0b0c0c;
+}
+
+#pvm {
+    font-size: smaller;
+}
+
+.containervm {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card, .tile {
+    background-color: #F0F8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s;
+    color: #0b0c0c;
+}
+
+/* ------------------- MENÚ HAMBURGUESA ------------------- */
+.opciones {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    background-color: #7B68EE; 
+    /* ***** Esto es lo más importante para la horizontalidad ***** */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.opciones li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.opciones li:last-child {
+    border-bottom: none;
+}
+
+.opciones a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* Hace que toda el área sea clicable */
+}
+
+.opciones a:hover {
+    background-color: #e0e0e0;
+}
+
+.hamburguesa {
+    cursor: pointer; 
+    font-size: 2em; 
+    color: white; 
+    padding: 10px;
+}
+
+.oculto {
+    display: none; 
+}
+
+/* ------------------- PIE DE PÁGINA ------------------- */
+footer #vm {
+    text-align: center;
+    background-color: #a98fff;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+/* Estilos para los enlaces individuales */
+footer div a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-small;
+}
+
+footer div a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    color: white;
+    font-size: small;
+}
+
+

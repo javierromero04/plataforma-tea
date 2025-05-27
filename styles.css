@@ -1,0 +1,821 @@
+/* ------------------- ESTILOS GENERALES ------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('img/background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center 200px;
+    color: #333;
+}
+
+body.en-simulacion #simular-movil {
+    display: none !important;
+}
+
+/* ------------------- ENCABEZADO Y NAVEGACIÓN ------------------- */
+header {
+    background-color: #a98fff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 24px;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li:last-child {
+    margin-left: 3;
+}
+
+.user-info {
+    color: white; 
+    font-weight: bold; 
+    font-size: 18px; 
+    padding: 0;
+    margin: 0 15px;
+    display: flex; 
+    align-items: center; 
+}
+
+.user-info a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 18px; 
+    margin-left: 5px; 
+}
+
+/* ------------------- CONTENIDO PRINCIPAL ------------------- */
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* ------------------- SECCIONES ------------------- */
+section h2 {
+    color: #4934aa;
+    text-align: center;
+}
+
+/* ------------------- TIPOGRAFÍA ------------------- */
+h1 {
+    color: #f7f9fb;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h2 { 
+    color: #4934aa;
+    text-align: center;
+}
+
+/* ------------------- ENLACES ------------------- */
+a {
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container img {
+    max-width: 100%; /* Hacer las imágenes responsive por defecto */
+    height: auto;
+    display: block; /* Evitar espacio extra debajo de la imagen */
+    margin: 0 auto; /* Centrar la imagen si es más pequeña que el contenedor */
+    padding: 0;
+}
+
+/* ------------------- BOTONES ------------------- */
+button, input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a98fff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #9672f3;
+}
+
+.color-button {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* ------------------- FORMULARIOS ------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    padding: 2em;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    width: 100%; 
+    margin-bottom: 1em; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.form-group label {
+    margin-bottom: 0.5em; 
+    font-weight: bold; 
+    color: #555; 
+}
+
+/* Estilos para los botones en fila */
+.form-buttons-row {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 15px; 
+    width: 100%; 
+}
+
+.form-buttons-row .btn {
+    flex-grow: 1; 
+    flex-basis: auto; 
+    max-width: 150px; 
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    resize: none;
+    padding: 10px;
+    width: calc(100% - 22px); /* Ajustar ancho para el padding y border */
+    margin-bottom: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+}
+
+.auth-link-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.auth-link-container p {
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* ------------------- JUEGOS ------------------- */
+.game, .juego, .game-container {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-board, #memory-board, #puzzle {
+    display: grid;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.game-board, #memory-board {
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+
+#puzzle {
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+}
+
+.card, .tile {
+    width: 100px;
+    height: 100px;
+    background-color: #F0F8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.active {
+    opacity: 0.3;
+}
+
+/* ------------------- EMOCIONES ------------------- */
+#emotion-message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#emoji-display {
+    font-size: 5rem;
+    margin: 20px 0;
+}
+
+/* ------------------- GALERÍA DE PICTOGRAMAS ------------------- */
+.container-recursos {
+    font-family: sans-serif;
+    background-color: #f0f8ff;
+    margin: auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.container-recursos .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 30px;
+}
+
+.container-recursos h1,
+.container-recursos h2 {
+    color: #2a4d7b;
+    text-align: center;
+}
+
+.container-recursos p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.pictograma {
+    width: 160px;
+    text-align: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.pictograma img {
+    width: 100px;
+    height: auto;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #007acc;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.boton:hover {
+    background-color: #005fa3;
+}
+
+/* ------------------- SUGERENCIAS ------------------- */
+.container p {
+    text-align: center;
+}
+
+/* ------------------- PIE DE PÁGINA ------------------- */
+footer {
+    text-align: center;
+    background-color: #a98fff;
+    color: white;
+    padding: 0.01em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer div {
+    display: flex;
+    gap: 25px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+/* Estilos para los enlaces individuales */
+footer div a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-small;
+}
+
+footer div a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: small;
+}
+
+/* MENÚ HAMBURGUESA */
+.opciones {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    background-color: #7B68EE; 
+    /* ***** Esto es lo más importante para la horizontalidad ***** */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.opciones li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.opciones li:last-child {
+    border-bottom: none;
+}
+
+.opciones a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* Hace que toda el área sea clicable */
+}
+
+.opciones a:hover {
+    background-color: #e0e0e0;
+}
+
+.hamburguesa {
+    cursor: pointer; 
+    font-size: 2em; 
+    color: white; 
+    padding: 10px;
+}
+
+.oculto {
+    display: none; 
+}
+
+/* ------------------- MEDIA QUERIES PARA RESPONSIVIDAD ------------------- */
+
+/* Media query para pantallas más pequeñas, si quieres que se apilen de nuevo en móvil */
+@media (max-width: 480px) {
+    .form-buttons-row {
+        flex-direction: column;
+        align-items: stretch; 
+    }
+    .form-buttons-row .btn {
+        max-width: 100%; 
+    }
+
+    footer div {
+        gap: 10px; 
+    }
+}
+
+
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        padding: 0.5em 0;
+    }
+
+    nav ul {
+        display: grid;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav ul li a, .user-info, .user-info a { 
+        font-size: 16px; 
+    }
+
+    /* Ocultar el botón simular-movil en pantallas pequeñas */
+    #simular-movil {
+        display: none !important;
+    }
+
+    .container {
+        margin-left: 5px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    h2, h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .game-board, #memory-board {
+        grid-template-columns: repeat(4, 60px); /* Ejemplo: ajusta el número y tamaño de columnas */
+        gap: 5px; /* Ajusta el espacio entre las cartas */
+    }
+
+    .card {
+        width: 40px; /* Ajusta el ancho de las cartas/fichas */
+        height: 40px; /* Ajusta la altura */
+        font-size: 1rem; /* Ajusta el tamaño de la fuente */
+        padding: 0.5em; 
+    }
+
+    .tile {
+        width: auto; /* Ajusta el ancho de las cartas/fichas */
+        height: auto; /* Ajusta la altura */
+        font-size: 0.8rem; /* Ajusta el tamaño de la fuente */
+        padding: 0.3em; 
+    }
+
+    #puzzle {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr); /* Ajusta las columnas del puzzle */
+        gap: 0.5px;
+    }
+
+    .pictograma {
+        width: 140px;
+    }
+
+    .pictograma img {
+        width: 80px;
+    }
+
+    footer {
+      font-size: 0.8em;
+      padding: 0.5em 0;
+      text-align: center;
+      background-color: #a98fff;
+      color: white;
+      position: relative; 
+      bottom: auto; 
+      width: 100%;
+      margin-top: 30px; 
+      display: grid;
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    footer div {
+    display: flex;
+    gap: 15px; 
+    flex-direction: column; 
+    align-items: center; 
+    }
+
+    /* Estilos para los enlaces individuales */
+    footer div a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer div a:hover {
+        text-decoration: underline;
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    /* Oculta el menú de navegación por defecto en pantallas pequeñas */
+    .nav-menu {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #a98fff; 
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        z-index: 999; 
+        overflow: hidden; 
+        max-height: 0; 
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out; 
+        padding: 0; 
+    }
+
+    /* Clase 'show' que JavaScript añade para mostrar el menú */
+    .nav-menu.show {
+        display: flex; 
+        max-height: 500px; 
+        /* Ajusta este valor si tienes muchos elementos para que se vean todos sin scroll */
+        padding: 10px 0; 
+    }
+
+    .nav-menu li {
+        margin: 0; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none; 
+    }
+
+    .nav-menu li a,
+    .nav-menu .dropdown-toggle { 
+        color: white;
+        padding: 15px 20px; 
+        display: block; 
+        font-size: 1em; 
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu .dropdown-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+
+    /* Ajustes específicos para el dropdown de usuario dentro del menú hamburguesa */
+    .nav-menu .dropdown {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .nav-menu .dropdown-menu {
+        position: static; 
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.1); 
+        opacity: 1; 
+        visibility: visible;
+        transform: translateY(0);
+        margin: 0; 
+        padding: 0;
+    }
+    .nav-menu .dropdown-menu li {
+        border-bottom: none; 
+    }
+    .nav-menu .dropdown-menu a {
+        padding: 10px 25px; 
+        text-align: left; 
+    }
+    .nav-menu .dropdown-menu a i {
+        margin-right: 10px; 
+    }
+    .nav-menu .dropdown-toggle {
+        justify-content: center; 
+    }
+
+    /* Quita los estilos de dropdown:hover .dropdown-menu en móvil */
+    .dropdown:hover .dropdown-menu {
+        opacity: 1; 
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        margin: 30px;
+        padding: 30px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+    }
+
+    .game-board, #memory-board {
+        grid-template-columns: repeat(4, 90px);
+        gap: 8px;
+    }
+
+    .card, .tile {
+        width: 90px;
+        height: 90px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Media query para ajustar el tamaño del simulador en pantallas más grandes */
+@media (min-width: 768px) {
+    .pantalla-movil {
+        width: 375px; /* Ancho un poco más grande */
+        height: 667px; /* Alto un poco más grande */
+    }
+}
+
+/* Media query para pantallas aún más grandes */
+@media (min-width: 992px) {
+    .pantalla-movil {
+        width: 360px; /* Otro ancho común */
+        height: 640px; /* Otro alto común */
+    }
+}
+
+/* Estilos boton simular movil */
+.simulacion-movil {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.marco-movil { 
+    background-color: #333; 
+    border-radius: 20px; 
+    padding: 20px; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: fit-content; 
+    height: fit-content; 
+}
+
+.pantalla-movil {
+    width: 375px; 
+    height: 667px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.iframe-movil {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#cerrar-simulador-iframe-boton {
+    z-index: 1002;
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; 
+    margin-top: 15px; /* Añade un espacio superior */
+    align-self: center; 
+    width: 150px; 
+}
+
+#cerrar-simulador-iframe-boton:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ------------------- MENÚ DESPLEGABLE ------------------- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    z-index: 999;
+    width: 180px;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display:block;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.show-dropdown {
+    display: block;
+}
+
+/* ------------------- ESTILOS PARA EL HEADER Y NAV EN VISTA MÓVIL (dentro del iframe) ------------------- */
+.mobile-header {
+    background-color: #a98fff; 
+    color: white;
+    padding: 10px 15px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mobile-header h1 {
+    font-size: 20px; 
+    margin: 0; 
+    text-align: left; 
+    color: white; 
+    flex-grow: 1; 
+}
+
+
